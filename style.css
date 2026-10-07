@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+    background: linear-gradient(135deg, #1f2937, #0f172a);
+}
+
+.calculator {
+    width: 430px;
+    padding: 22px;
+    border-radius: 28px 28px 40px 40px;
+    background: linear-gradient(145deg, #d6d3cc, #aaa9a4);
+    border: 3px solid #777;
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.5),
+        inset 2px 2px 4px rgba(255, 255, 255, 0.7);
+}
+
+/* TOP AREA */
+
+.calculator-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 0 5px;
+}
+
+.calculator-top h2 {
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: #202020;
+}
+
+.calculator-top p {
+    font-size: 10px;
+    margin-top: 3px;
+    color: #166534;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* SOLAR PANEL */
+
+.solar-panel {
+    width: 135px;
+    height: 45px;
+    background: #342e2a;
+    border: 4px solid #777;
+    border-radius: 5px;
+    display: flex;
+    overflow: hidden;
+}
+
+.solar-panel span {
+    flex: 1;
+    border-right: 1px solid #76675d;
+}
+
+.solar-panel span:last-child {
+    border-right: none;
+}
+
+/* LCD SCREEN */
+
+.screen {
+    min-height: 115px;
+    background: #a8b8a3;
+    border: 8px solid #777b75;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    padding: 10px 12px;
+
+    box-shadow:
+        inset 0 3px 8px rgba(0, 0, 0, 0.25),
+        0 2px 2px rgba(255, 255, 255, 0.6);
+
+    overflow: hidden;
+}
+
+.screen-info {
+    display: flex;
+    justify-content: space-between;
+    font-family: "Courier New", monospace;
+    font-size: 12px;
+    font-weight: bold;
+    color: #26332b;
+}
+
+#expression {
+    height: 30px;
+    margin-top: 7px;
+    text-align: right;
+    font-family: "Courier New", monospace;
+    font-size: 15px;
+    color: #34433a;
+    overflow: hidden;
+}
+
+#display {
+    text-align: right;
+    font-family: "Courier New", monospace;
+    font-size: 30px;
+    font-weight: bold;
+    color: #17221b;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* MODE BUTTONS */
+
+.mode-buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 9px;
+    margin-bottom: 17px;
+}
+
+.mode-buttons button {
+    min-height: 39px;
+    border: none;
+    border-radius: 12px 12px 17px 17px;
+    background: linear-gradient(#667085, #3f4858);
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 3px 0 #252b34;
+}
+
+.mode-buttons button:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 #252b34;
+}
+
+.mode-buttons .round-btn {
+    border-radius: 50%;
+    height: 57px;
+    width: 57px;
+    justify-self: center;
+    align-self: center;
+    font-size: 8px;
+}
+
+/* ALL BUTTON GRIDS */
+
+.buttons {
+    display: grid;
+    gap: 9px;
+}
+
+/* SCIENTIFIC KEYS */
+
+.scientific {
+    grid-template-columns: repeat(6, 1fr);
+    margin-bottom: 17px;
+}
+
+.scientific button {
+    height: 38px;
+    border: none;
+    border-radius: 8px 8px 12px 12px;
+    background: linear-gradient(#31343a, #15171a);
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 3px 0 #080808;
+    transition: 0.1s;
+}
+
+.scientific button:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 #080808;
+}
+
+/* MAIN KEYPAD */
+
+.keypad {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.keypad button {
+    height: 55px;
+    border: none;
+    border-radius: 9px 9px 14px 14px;
+    cursor: pointer;
+    font-size: 21px;
+    font-weight: bold;
+
+    background: linear-gradient(#ffffff, #dedede);
+    color: #171717;
+
+    box-shadow:
+        0 4px 0 #858585,
+        inset 0 1px 2px rgba(255, 255, 255, 0.8);
+
+    transition: 0.1s;
+}
+
+.keypad button:active {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 #777;
+}
+
+/* OPERATOR KEYS */
+
+.keypad .operator {
+    background: linear-gradient(#f8fafc, #cbd5e1);
+    font-size: 25px;
+}
+
+/* DEL AND AC */
+
+.keypad .delete,
+.keypad .clear {
+    background: linear-gradient(#ffb347, #e77800);
+    color: #151515;
+    font-size: 14px;
+    box-shadow: 0 4px 0 #9b4d00;
+}
+
+/* EQUAL */
+
+.keypad .equal {
+    font-size: 27px;
+}
+
+/* FOOTER */
+
+.calculator-footer {
+    margin-top: 17px;
+    text-align: center;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #555;
+}
+
+/* HOVER */
+
+@media (hover: hover) {
+    .scientific button:hover {
+        background: #3c4048;
+    }
+
+    .keypad button:hover {
+        filter: brightness(0.95);
+    }
+
+    .keypad .delete:hover,
+    .keypad .clear:hover {
+        filter: brightness(1.07);
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+    .calculator {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .keypad,
+    .scientific {
+        gap: 6px;
+    }
+
+    .scientific button {
+        font-size: 11px;
+    }
+
+    .keypad button {
+        height: 50px;
+        font-size: 18px;
+    }
+
+    .solar-panel {
+        width: 110px;
+    }
+}

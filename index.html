@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Scientific Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="calculator" id="calculator">
+
+    <!-- ================= TOP ================= -->
+
+    <div class="calculator-top">
+
+        <div>
+            <h2>SCIENTIFIC</h2>
+            <p>Advanced Calculator</p>
+        </div>
+
+        <div class="solar-panel">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+
+
+    <!-- ================= DISPLAY ================= -->
+
+    <div class="screen" id="screen">
+
+        <div class="screen-info">
+            <span id="modeText">DEG</span>
+            <span id="shiftIndicator"></span>
+            <span>SCI</span>
+        </div>
+
+        <div id="expression"></div>
+
+        <div id="display">0</div>
+
+    </div>
+
+
+    <!-- ================= MODE BUTTONS ================= -->
+
+    <div class="mode-buttons">
+
+        <button
+            type="button"
+            class="mode-btn"
+            id="shiftBtn">
+            SHIFT
+        </button>
+
+        <button
+            type="button"
+            class="mode-btn"
+            id="alphaBtn">
+            ALPHA
+        </button>
+
+        <button
+            type="button"
+            class="round-btn"
+            id="replayBtn">
+            REPLAY
+        </button>
+
+        <button
+            type="button"
+            class="mode-btn"
+            id="degRadBtn">
+            DEG/RAD
+        </button>
+
+        <button
+            type="button"
+            class="mode-btn"
+            id="onBtn">
+            ON
+        </button>
+
+    </div>
+
+
+    <!-- ================= SCIENTIFIC KEYS ================= -->
+
+    <div class="buttons scientific">
+
+        <button
+            type="button"
+            data-action="reciprocal">
+            x⁻¹
+        </button>
+
+        <button
+            type="button"
+            data-action="square">
+            x²
+        </button>
+
+        <button
+            type="button"
+            data-action="sqrt">
+            √
+        </button>
+
+        <button
+            type="button"
+            data-action="power">
+            xʸ
+        </button>
+
+        <button
+            type="button"
+            data-action="log">
+            log
+        </button>
+
+        <button
+            type="button"
+            data-action="ln">
+            ln
+        </button>
+
+
+        <button
+            type="button"
+            data-action="pi">
+            π
+        </button>
+
+        <button
+            type="button"
+            data-action="exp">
+            e
+        </button>
+
+        <button
+            type="button"
+            id="sinBtn"
+            data-action="sin">
+            sin
+        </button>
+
+        <button
+            type="button"
+            id="cosBtn"
+            data-action="cos">
+            cos
+        </button>
+
+        <button
+            type="button"
+            id="tanBtn"
+            data-action="tan">
+            tan
+        </button>
+
+        <button
+            type="button"
+            data-action="percent">
+            %
+        </button>
+
+
+        <button
+            type="button"
+            data-value="(">
+            (
+        </button>
+
+        <button
+            type="button"
+            data-value=")">
+            )
+        </button>
+
+        <button
+            type="button"
+            data-action="ans">
+            Ans
+        </button>
+
+        <button
+            type="button"
+            data-action="factorial">
+            x!
+        </button>
+
+        <button
+            type="button"
+            data-action="tenPower">
+            10ˣ
+        </button>
+
+        <button
+            type="button"
+            data-action="expPower">
+            eˣ
+        </button>
+
+    </div>
+
+
+    <!-- ================= MAIN KEYPAD ================= -->
+
+    <div class="buttons keypad">
+
+        <!-- ROW 1 -->
+
+        <button
+            type="button"
+            class="number"
+            data-value="7">
+            7
+        </button>
+
+        <button
+            type="button"
+            class="number"
+            data-value="8">
+            8
+        </button>
+
+        <button
+            type="button"
+            class="number"
+            data-value="9">
+            9
+        </button>
+
+        <button
+            type="button"
+            class="delete"
+            data-action="delete">
+            DEL
+        </button>
+
+        <button
+            type="button"
+            class="clear"
+            id="acBtn"
+            data-action="clear">
+            AC
+        </button>
+
+
+        <!-- ROW 2 -->
+
+        <button
+            type="button"
+            class="number"
+            data-value="4">
+            4
+        </button>
+
+        <button
+            type="button"
+            class="number"
+            data-value="5">
+            5
+        </button>
+
+        <button
+            type="button"
+            class="number"
+            data-value="6">
+            6
+        </button>
+
+        <button
+            type="button"
+            class="operator"
+            data-value="*">
+            ×
+        </button>
+
+        <button
+            type="button"
+            class="operator"
+            data-value="/">
+            ÷
+        </button>
+
+
+        <!-- ROW 3 -->
+
+        <button
+            type="button"
+            class="number"
+            data-value="1">
+            1
+        </button>
+
+        <button
+            type="button"
+            class="number"
+            data-value="2">
+            2
+        </button>
+
+        <button
+            type="button"
+            class="number"
+            data-value="3">
+            3
+        </button>
+
+        <button
+            type="button"
+            class="operator"
+            data-value="+">
+            +
+        </button>
+
+        <button
+            type="button"
+            class="operator"
+            data-value="-">
+            −
+        </button>
+
+
+        <!-- ROW 4 -->
+
+        <button
+            type="button"
+            class="number"
+            data-value="0">
+            0
+        </button>
+
+        <button
+            type="button"
+            class="number"
+            data-value=".">
+            .
+        </button>
+
+        <button
+            type="button"
+            data-action="scientificNotation">
+            ×10ˣ
+        </button>
+
+        <button
+            type="button"
+            data-action="ans">
+            Ans
+        </button>
+
+        <button
+            type="button"
+            class="equal"
+            data-action="calculate">
+            =
+        </button>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <div class="calculator-footer">
+        HTML • CSS • JavaScript
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
